@@ -1,15 +1,5 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <title>Home Page for Car Rentals</title>
-    <meta name="description" content="this is a car rental company, we have the best cars" />
-</head>
-
-<body>
+{% extends 'car_rental/base.html' %}
+{% block content%} 
     <h1> the time now: </h1>
 <h2>{{today}} </h2>
-
-</body>
-
-</html>
+{% endblock%}

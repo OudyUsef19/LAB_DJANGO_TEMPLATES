@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} title {% endblock %} </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link href="/static/css/main.css" rel="stylesheet" />
+</head>
+<body>
+    
+    <div class="nav-bar">
+        <nav>
+            
+            <ol>
+                <li><img class="img-bar" src="/static/img/images.png" alt=""> </li>
+               <li><a id = "first-services" href="{% url 'car_rental:index_view' %}" >Home</a></li>
+               <li><a href="{% url 'car_rental:today_viwe' %}">Today</a> </li>
+               <li><a href="{% url 'car_rental:random_password'%}" >Password Generated</a></li>
+               <li><a href="{% url 'car_rental:favs_games'%}">favorite games</a></li>
+            </ol>
+       </nav>
+    </div>
+
+    {% block content %}
+    <h1> some content </h1>
+    {% endblock %}
+    
+    <footer>
+        <h5> make by ❤️, 2024 since </h5>
+    </footer>
+</body>
+</html>
